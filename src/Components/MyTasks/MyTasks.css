@@ -1,0 +1,43 @@
+.tasks-one-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+    grid-gap: 20px;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 35px;
+}
+
+.tasks-one-card li {
+  width: 280px;
+  height: auto;
+  background: pink;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+.tasks-one-card li:hover {
+  transform: translateY(-3px);
+}
+.tasks-one-card a {
+  text-decoration: none;
+  color: #222;
+}
+.tasks-one-card li h2 {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 18px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tasks-one-card li p {
+  text-align: left;
+  font-size: 18px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
