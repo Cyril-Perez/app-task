@@ -14,7 +14,6 @@ function App() {
           <Route path="/" exact component={MyTasks}/>
           <Route path="/edit" exact component={Form}/>
           <Route path="/displayTasks/:id" exact component={DisplayTasks}/>
-
         </Switch>
     </Router>
   );

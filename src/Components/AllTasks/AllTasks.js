@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import {useSelector } from "react-redux"
 import left from "./Tasks/left-arrow.svg"
 import right from "./Tasks/right-arrow.svg"
-
+import { Link } from "react-router-dom"
 
 import Tasks from "./Tasks/Tasks"
   
@@ -50,13 +50,14 @@ const AllTasks = ()=>{
             </form>
             <ul className="tasks-list">
                 {tasksList.map((item)=>{
-                  return  <Tasks 
+                  return  <Link to={{pathname : `/displayTasks/${item.title}`}} style={{textDecoration: "none" , color : "#333"}}><Tasks 
                     key={item.id}
                     id={item.id}
                     title={item.title}
                     subtitle={item.subtitle}
                     body={item.body}
                     />
+                    </Link>
                     
                 })}
             </ul>

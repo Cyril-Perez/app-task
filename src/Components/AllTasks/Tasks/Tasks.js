@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const Tasks = (props)=>{
+    console.log(props);
     const dispatch =  useDispatch()
 
     const deleteTask = ()=>{
@@ -24,6 +25,7 @@ const Tasks = (props)=>{
     }
     //second reducer pour modifiy
     return (
+        
         <li className="tasks-prev">
                 <div className="content-tasks-left">
                     <p>{props.title}</p>
@@ -40,6 +42,7 @@ const Tasks = (props)=>{
                     </Link>
                 </div>
         </li>
+       
     )
 }
 export default Tasks

@@ -7,20 +7,21 @@ const  DisplayTasks = ()=> {
   const  id  = useParams();
   console.log(id);
 
-  const { tasks } = useSelector((state) => state.taskReducer);
-
-  const index = tasks.findIndex((item) => item.title === id);
+  const  tasks  = useSelector((state) => state.taskReducer)
+  console.log(tasks);
+  const index = tasks.taches.filter((item) => {return item.title === id.id});
+  console.log(index);
 
   return (
     <div className="display-content">
       <h2 className="title-taches">
-        Votre note : {tasks[index] ? `${tasks[index].title}` : ""}
+        Votre note : {index[0] ? index[0].title : ""}
       </h2>
       <span className="subtitle-taches">
-        {tasks[index] ? `${tasks[index].subtitle}` : ""}
+          {index[0] ? index[0].subtitle : ""}
       </span>
       <p className="txt-taches">
-        {tasks[index] ? `${tasks[index].body}` : ""}
+      {index[0] ? index[0].body : ""}
       </p>
     </div>
   );

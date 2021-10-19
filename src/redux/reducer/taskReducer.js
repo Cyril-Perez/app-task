@@ -35,7 +35,7 @@ export default function taskReducer(state = initialState,action){
              
             case "addTasks":
               //copy mes objets deja présents
-              const newTasksArrayAdd = [...state.taches]
+              // const newTasksArrayAdd = [...state.taches]
               //push l'objet envoyer de mon form et return state
               // newTasksArrayAdd.push(action.payload)
               // // return {
